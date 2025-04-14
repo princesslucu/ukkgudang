@@ -51,7 +51,7 @@ $result = $koneksi->query($sql);
                 <ul>
                     <li class="mb-4">
                         <a href="index.php" class="flex items-center text-gray-300 hover:text-white">
-                            <i class="fas fa-home mr-3"></i> Home
+                             <i class="fas fa-home mr-3"></i> Home
                         </a>
                     </li>
                     <li class="mb-4">
@@ -117,6 +117,7 @@ $result = $koneksi->query($sql);
                                         <td class="border border-gray-300 px-4 py-2"><?= htmlspecialchars($distribusi['nama_toko'] ?? '-') ?></td>
                                         <td class="border border-gray-300 px-4 py-2"><?= htmlspecialchars($distribusi['nama_barang'] ?? '-') ?></td>
                                         <td class="border border-gray-300 px-4 py-2"><?= htmlspecialchars($distribusi['jml_barang_keluar'] ?? '0') ?></td>
+                                         <input type="number" name="jml_barang_keluar" min="1" required class="..."/>
                                         <td class="border border-gray-300 px-4 py-2"><?= htmlspecialchars($distribusi['tgl_keluar'] ?? '-') ?></td>
                                         <td class="border border-gray-300 px-4 py-2">Rp <?= number_format($distribusi['harga_barang'] ?? 0, 0, ',', '.') ?></td>
                                         <td class="border border-gray-300 px-4 py-2">Rp <?= number_format($distribusi['sub_total'] ?? 0, 0, ',', '.') ?></td>
